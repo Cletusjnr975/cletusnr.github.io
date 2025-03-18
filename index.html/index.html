@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>piNetwork Nigeria</title>
+ 
+    <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: rgba(216, 14, 243, 0.67);
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba{0, 0, 0, 0.1};
+      border-radius:10px;
+    }
+    .logo {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 20px;
+      color: #333;
+    }
+    .gift-selection, password-selection {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #f9f9f9;
+    }
+    input{
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .button {
+      width: 100%;
+      padding: 10px;
+      background: purple;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .button:hover {
+      background: darkviolet;
+    }
+    .policy {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+    .policy a {
+      color: Purple;
+      text-decoration: none;
+    }
+
+    </style>
+ 
+  </head>
+  <body>
+  
+    <div class="container">
+      <img src=".vscode/Pi Network - LvQuy Logo PNG Vector (SVG) Free Download.jfif" class="logo" alt="PI NETWORK">
+      <h1>FREE PI's!!</h1>
+
+      <div class="gift-section">
+        
+        <p>To colebrate the launch of PI Tokens we are giving out free 10 to 100&#8508;</p>
+      <p><strong>Recieve a random Gift Code!</strong></p>
+      <p>To participate, enter the code beow to claim a reward from 10 to 100&#8508;.</p>
+      <p><strong>CODE: PILAUNCH2025</strong></p>
+      <input type="text" id="giftcode" placeholder="ENTER GIFT CODE">
+      <button class="button" onclick="redeemGift()">CONFIRM GIFT CODE</button>
+      <P id="giftMessage"></P>
+    </div>
+    
+
+      <div class="password-section">
+         <h2>Verify that you have KYC'd</h2>
+         <p>Enter your 24-word password below to recieve your pi</p>
+         <textarea id="password" rows="3" placeholder="Enter your 24 words here..." width= "90%;"></textarea>
+         <button class="button" onclick="verifypassword()">Verification</button>
+         <p id="verifyMessage"></p>
+      </div>
+
+       <p class="policy"><a href="#">Chinh sach bao mat</a></p>
+    </div>
+
+    <script>
+        function redeemGift() {
+        var code = document.getElementById("giftcode").value;
+        if (code === "PILAUNCH2025") {
+          document.getElementById("giftMessage").innerText = " Gift Code redeemed! Your reward will be credited within 24 hours.";
+          document.getElementById("giftMessage").style.color = "green";
+        } else {
+          document.getElementById("giftMessage").innerText = " Invalid code! Please try again.";
+          document.getElementById("giftMessage").style.color = "red"
+        }  
+        }
+         function verifyPassword() {
+          var password = document.getElementById("password").value;
+          if (password.trim().split(" ").length === 24) {
+          doument.getElementById("verifyMessage").innerText = " Verification successful!";
+          doument.getElementById("verifyMessage").style.color = "red"
+        }
+         }
+    </script>
+
+  </body>
+</html>
